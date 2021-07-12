@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Authors>Pratik Patil</Authors>
+    <Company>www.pratikpatil.net (connect@pratikpatil.net)</Company>
+    <PackageId>aide.ConsoleAssist</PackageId>
+    <Description>Helper library for console input and output.</Description>
+    <PackageProjectUrl>https://github.com/src-pratik/aide.ConsoleAssist</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/src-pratik/aide.ConsoleAssist</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageTags>console, dotnet</PackageTags>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Workspace\Garage\src-pratik\aide.ConsoleAssist\aide.ConsoleAssist\aide.ConsoleAssist.xml</DocumentationFile>
+    <WarningLevel>1</WarningLevel>
+    <OutputPath></OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>C:\Workspace\Garage\github\helpe.ConsoleAssist\helpe.ConsoleAssist\helpe.ConsoleAssist.xml</DocumentationFile>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,278 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>aide.ConsoleAssist</name>
+    </assembly>
+    <members>
+        <member name="T:aide.ConsoleAssist.Input">
+            <summary>
+            Helper to take console input.
+            </summary>
+        </member>
+        <member name="M:aide.ConsoleAssist.Input.PromptYesOrNo(System.String,System.Boolean)">
+            <summary>
+            Displays a message for which a yes or no response is expected.
+            </summary>
+            <param name="message">Message to be displayed.</param>
+            <param name="defaultAnswer">Default answer.</param>
+            <returns>Selected answer</returns>
+        </member>
+        <member name="M:aide.ConsoleAssist.Input.ReadInteger(System.String,System.Int32,System.Int32)">
+            <summary>
+            Reads an integer value as input.
+            </summary>
+            <param name="message">Message to be displayed.</param>
+            <param name="min">Minimum value of integer expected.</param>
+            <param name="max">Maximum value of integer expected.</param>
+            <returns>Value provided as input.</returns>
+        </member>
+        <member name="M:aide.ConsoleAssist.Input.ReadInteger(System.String)">
+            <summary>
+            Reads an integer value as input.
+            </summary>
+            <param name="message">Message to be displayed.</param>
+            <returns>Value provided as input.</returns>
+        </member>
+        <member name="T:aide.ConsoleAssist.Menu">
+            <summary>
+            Helper to display menu and take input from user based upon the menu.
+            </summary>
+        </member>
+        <member name="P:aide.ConsoleAssist.Menu.Name">
+            <summary>
+            Name of the menu.
+            </summary>
+        </member>
+        <member name="P:aide.ConsoleAssist.Menu.Header">
+            <summary>
+            To display the menu name as header in wrapped line.
+            </summary>
+        </member>
+        <member name="M:aide.ConsoleAssist.Menu.#ctor(System.String,System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="name">Name of the menu.</param>
+            <param name="header">To display the menu name as header in wrapped line.</param>
+        </member>
+        <member name="M:aide.ConsoleAssist.Menu.Add(System.String,System.Action)">
+            <summary>
+            Add option to menu list.
+            </summary>
+            <param name="name">Name of the option.</param>
+            <param name="action">Action assigned to be invoked on selection of the option.</param>
+        </member>
+        <member name="M:aide.ConsoleAssist.Menu.Add(aide.ConsoleAssist.Option)">
+            <summary>
+            Add option to menu list.
+            </summary>
+            <param name="option">Option object.</param>
+        </member>
+        <member name="M:aide.ConsoleAssist.Menu.Display">
+            <summary>
+            Display the menu.
+            </summary>
+        </member>
+        <member name="M:aide.ConsoleAssist.Menu.Contains(System.String)">
+            <summary>
+            Check if the option with given name exist.
+            </summary>
+            <param name="name">Name of the option to be searched.</param>
+            <returns>True or False whether the option exists.</returns>
+        </member>
+        <member name="M:aide.ConsoleAssist.Menu.ToString">
+            <summary>
+            String representation of the object.
+            </summary>
+            <returns>Name of the menu.</returns>
+        </member>
+        <member name="M:aide.ConsoleAssist.Menu.EnumMenu``1(System.String,System.Boolean)">
+            <summary>
+            Displays an menu from an Enum.
+            </summary>
+            <typeparam name="TEnum">Enum type</typeparam>
+            <param name="name">Name of the menu.</param>
+            <param name="header">To display the menu name as header in wrapped line.</param>
+            <returns>Selected enum value based upon selected option.</returns>
+        </member>
+        <member name="T:aide.ConsoleAssist.Option">
+            <summary>
+            Display option.
+            </summary>
+        </member>
+        <member name="P:aide.ConsoleAssist.Option.Name">
+            <summary>
+            Name of the option.
+            </summary>
+        </member>
+        <member name="P:aide.ConsoleAssist.Option.Action">
+            <summary>
+            Action assigned to be invoked on selection of the option.
+            </summary>
+        </member>
+        <member name="M:aide.ConsoleAssist.Option.#ctor(System.String,System.Action)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="name">Name of the option.</param>
+            <param name="action">Action assigned to be invoked on selection of the option.</param>
+        </member>
+        <member name="M:aide.ConsoleAssist.Option.ToString">
+            <summary>
+            String representation of the object.
+            </summary>
+            <returns>Name of the option</returns>
+        </member>
+        <member name="T:aide.ConsoleAssist.Output">
+            <summary>
+            Helper to display console output.
+            </summary>
+        </member>
+        <member name="P:aide.ConsoleAssist.Output.Success">
+            <summary>
+            Color set for Sucess. Default Green.
+            </summary>
+        </member>
+        <member name="P:aide.ConsoleAssist.Output.Error">
+            <summary>
+            Color set for Error. Default Red.
+            </summary>
+        </member>
+        <member name="P:aide.ConsoleAssist.Output.Warning">
+            <summary>
+            Color set for Warning. Default Dark Yellow.
+            </summary>
+        </member>
+        <member name="P:aide.ConsoleAssist.Output.Information">
+            <summary>
+            Color set for Information. Default Dark Cyan.
+            </summary>
+        </member>
+        <member name="P:aide.ConsoleAssist.Output.MinimumWrapCharacters">
+            <summary>
+            Minimum number of characters used in the wrap line. 
+            Default 10 characters.
+            </summary>
+        </member>
+        <member name="P:aide.ConsoleAssist.Output.EnableColor">
+            <summary>
+            Enable or Disable color output. Default True.
+            </summary>
+        </member>
+        <member name="M:aide.ConsoleAssist.Output.WriteLine(System.String,System.Nullable{System.ConsoleColor})">
+            <summary>
+            Write text line on the console.
+            </summary>
+            <param name="text">Text to be displayed.</param>
+            <param name="color">Foreground color in which the text will be displayed.</param>
+        </member>
+        <member name="M:aide.ConsoleAssist.Output.Write(System.String,System.Nullable{System.ConsoleColor})">
+            <summary>
+             Write text on the console.
+            </summary>
+            <param name="text">Text to be displayed.</param>
+            <param name="color">Foreground color in which the text will be displayed.</param>
+        </member>
+        <member name="M:aide.ConsoleAssist.Output.Write(System.String,System.String)">
+            <summary>
+            Write text on the console.
+            </summary>
+            <param name="text">Text to be displayed.</param>
+            <param name="color">Foreground color in which the text will be displayed. The color name should be a valid ConsoleColor.</param>
+        </member>
+        <member name="M:aide.ConsoleAssist.Output.WriteLine(System.String,System.String)">
+            <summary>
+            Write text line on the console.
+            </summary>
+            <param name="text">Text to be displayed.</param>
+            <param name="color">Foreground color in which the text will be displayed. The color name should be a valid ConsoleColor..</param>
+        </member>
+        <member name="M:aide.ConsoleAssist.Output.WriteLineWithWrap(System.String,System.Char,System.ConsoleColor,System.ConsoleColor)">
+            <summary>
+            Write text line on the console and wrap the line with characters
+            ====================
+            Demo Text
+            ====================
+            </summary>
+            <param name="text">Text to be displayed.</param>
+            <param name="wrapChar">Character used in the wrap line.</param>
+            <param name="textColor">Foreground color in which the text will be displayed.</param>
+            <param name="wrapColor">Foreground color in which the wrap line will be displayed.</param>
+        </member>
+        <member name="M:aide.ConsoleAssist.Output.WriteLineUsingTemplate(System.String,System.Nullable{System.ConsoleColor})">
+            <summary>
+            Writes line of text using template. 
+            The template tag allows to set color to substring of text which is in between of the tags. 
+            e.g. Hello [green]World[/green] !!! Welcome to [red]Console Assist[/red].
+            The word "World" will be displayed in green color, similarly "Console Assist" in red.
+            The rest of the text will be displayed with the param value of defaultTextColor (default is the existing foreground color).
+            </summary>
+            <param name="text">Text to be displayed with template placehodlers.</param>
+            <param name="defaultTextColor">Default foreground color for text.</param>
+        </member>
+        <member name="M:aide.ConsoleAssist.Output.WriteUsingTemplate(System.String,System.Nullable{System.ConsoleColor})">
+            <summary>
+            Writes text using template. 
+            The template tag allows to set color to substring of text which is in between of the tags. 
+            e.g. Hello [green]World[/green] !!! Welcome to [red]Console Assist[/red].
+            The word "World" will be displayed in green color, similarly "Console Assist" in red.
+            The rest of the text will be displayed with the param value of defaultTextColor (default is the existing foreground color).
+            </summary>
+            <param name="text">Text to be displayed with template placehodlers.</param>
+            <param name="defaultTextColor">Default foreground color for text.</param>
+        </member>
+        <member name="M:aide.ConsoleAssist.Output.ResetColor">
+            <summary>
+            Resets the console foreground color to the default color.
+            </summary>
+        </member>
+        <member name="M:aide.ConsoleAssist.Output.WriteLineSuccess(System.String)">
+            <summary>
+            Write line with foreground color Success.
+            </summary>
+            <param name="text">Text to be displayed.</param>
+        </member>
+        <member name="M:aide.ConsoleAssist.Output.WriteLineError(System.String)">
+            <summary>
+            Write line with foreground color Error.
+            </summary>
+            <param name="text">Text to be displayed.</param>
+        </member>
+        <member name="M:aide.ConsoleAssist.Output.WriteLineWarning(System.String)">
+            <summary>
+            Write line with foreground color Warning.
+            </summary>
+            <param name="text">Text to be displayed.</param>
+        </member>
+        <member name="M:aide.ConsoleAssist.Output.WriteLineInformation(System.String)">
+            <summary>
+            Write line with foreground color Information.
+            </summary>
+            <param name="text">Text to be displayed.</param>
+        </member>
+        <member name="M:aide.ConsoleAssist.Output.WriteSuccess(System.String)">
+            <summary>
+            Write line with foreground color Sucess.
+            </summary>
+            <param name="text">Text to be displayed.</param>
+        </member>
+        <member name="M:aide.ConsoleAssist.Output.WriteError(System.String)">
+            <summary>
+            Write line with foreground color Error.
+            </summary>
+            <param name="text">Text to be displayed.</param>
+        </member>
+        <member name="M:aide.ConsoleAssist.Output.WriteWarning(System.String)">
+            <summary>
+            Write line with foreground color Warning.
+            </summary>
+            <param name="text">Text to be displayed.</param>
+        </member>
+        <member name="M:aide.ConsoleAssist.Output.WriteInformation(System.String)">
+            <summary>
+            Write line with foreground color Information.
+            </summary>
+            <param name="text">Text to be displayed.</param>
+        </member>
+    </members>
+</doc>

@@ -14,6 +14,7 @@
     <RepositoryType>Git</RepositoryType>
     <PackageTags>console, dotnet</PackageTags>
     <SignAssembly>false</SignAssembly>
+    <PackageIcon>aide-icon.png</PackageIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -25,5 +26,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile>C:\Workspace\Garage\github\helpe.ConsoleAssist\helpe.ConsoleAssist\helpe.ConsoleAssist.xml</DocumentationFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\resources\aide-icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
